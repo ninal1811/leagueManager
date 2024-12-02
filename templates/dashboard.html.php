@@ -18,6 +18,9 @@
             <a href="/leagueManager/player.php" class="menu">Players</a>
             <a href="/leagueManager/match.php" class="menu">Match</a>
         </div>
+        <div>
+            <img src="/leagueManager/templates/players.png" class="bg">
+        </div>
     </div>
 </body>
 <?php include __DIR__ . '/footer.php'; ?>

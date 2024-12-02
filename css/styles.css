@@ -15,9 +15,10 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
+    scroll-behavior: smooth;
 }
 .bg {
-    background-image: url('/templates/bg.png');
+    width: 50%;
 }
 .login, .signup {
     background: #1d428a;

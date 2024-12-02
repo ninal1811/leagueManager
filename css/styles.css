@@ -17,7 +17,7 @@ body {
     font-style: normal;
 }
 .bg {
-    background-image: url('https://nbafantasy.nba.com/static/media/player-comp-460.3dcde219.png');
+    background-image: url('/templates/bg.png');
 }
 .login, .signup {
     background: #1d428a;
@@ -125,7 +125,7 @@ button:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
-.team, .league {
+.team, .league, .match {
     text-align: center;
 
 }

@@ -198,3 +198,15 @@ END $$
 DELIMITER ;
 
 CALL GetLeagueFromUser(1);
+
+
+DELIMITER $$
+CREATE PROCEDURE GetTeamFromLeague(IN p_League_ID INT)
+    BEGIN
+    SELECT t.* 
+    FROM Team t INNER JOIN League l
+    ON t.League_ID = p_League_ID;
+END $$
+DELIMITER;
+
+CALL GetTeamFromLeague(1);

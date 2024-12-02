@@ -210,3 +210,25 @@ END $$
 DELIMITER;
 
 CALL GetTeamFromLeague(1);
+
+
+-- add trade
+
+CREATE PROCEDURE AddTrade (
+    IN p_Team1_ID NUMERIC(8,0),
+    IN p_Team2_ID NUMERIC(8,0),
+    IN p_TraderPlayer1_ID NUMERIC(8,0)
+    IN p_TraderPlayer2_ID NUMERIC(8,0)
+)
+
+BEGIN
+    DECLARE next_ID NUMERIC(10,0);
+    SELECT IFNULL(MAX(Trade_ID), 0) + 1 INTO next_ID FROM Trade;
+
+    INSERT INTO Trade (Trade_ID,Team1_ID,Team2_ID,TradedPlayer1_ID,TradedPlayer2_ID,TradeDate)
+    VALUES (next_ID,p_Team1_ID,p_Team2_ID,p_TraderPlayer1_ID,p_TraderPlayer2_ID,CURDATE());
+END $$
+
+DELIMITER ;
+
+CALL AddTrade(1,2,1,6);

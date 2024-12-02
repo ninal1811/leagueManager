@@ -15,6 +15,7 @@
     </div>
 
     <div class="container">
+<<<<<<< HEAD
         <h2>My Teams</h2>
         <?php if ($error): ?>
             <p class="error" style="color: red;"><?php echo htmlspecialchars($error); ?></p>
@@ -34,6 +35,20 @@
             </thead>
             <tbody>
                 <?php if (!empty($teams)): ?>
+=======
+        <div class="team">
+            <h2>My Teams</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Team ID</th>
+                        <th>Team Name</th>
+                        <th>League ID</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+>>>>>>> 2327eac (Fixed UI for team)
                     <?php foreach ($teams as $team): ?>
                         <tr>
                             <td><?php echo htmlspecialchars($team['Team_ID']); ?></td>
@@ -42,6 +57,7 @@
                             <td><?php echo htmlspecialchars($team['Status']); ?></td>
                         </tr>
                     <?php endforeach; ?>
+<<<<<<< HEAD
                 <?php else: ?>
                     <tr>
                         <td colspan="4">No teams found.</td>
@@ -56,6 +72,26 @@
             <input type="number" name="league_id" placeholder="League ID" required>
             <button type="submit">Add Team</button>
         </form>
+=======
+                </tbody>
+            </table>
+        </div>
+        <div class="team">
+            <h3>Add a Team</h3>
+            <form action="team.php" method="POST">
+                <input type="text" name="team_name" placeholder="Team Name" required>
+                <input type="number" name="league_id" placeholder="League ID" required>                    
+                <button type="submit">Add Team</button>
+            </form>
+            <?php if ($error): ?>
+            <p class="error"><?php echo htmlspecialchars($error); ?></p>
+            <?php endif; ?>
+            <?php if ($success): ?>
+            <p class="success"><?php echo htmlspecialchars($success); ?></p>
+            <?php endif; ?>
+        </div>
+>>>>>>> 2327eac (Fixed UI for team)
     </div>
 </body>
 <?php include __DIR__ . '/footer.php'; ?>
+

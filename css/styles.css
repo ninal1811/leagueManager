@@ -19,7 +19,6 @@ body {
 }
 .bg {
     background-image: url('https://basketballforever.com/wp-content/uploads/2021/09/Prime-players-scaled.jpg');
-    background-repeat: no-repeat;
     background-size: cover;
 }
 .login, .signup {

@@ -48,7 +48,7 @@ button:hover {
 }
 .navbar {
     background-color: #e0e0e0;
-    padding: 10px 20px;
+    padding: 15px 25px;
     display: flex;
     gap: 20px;
     border-bottom: 1px solid #ccc;
@@ -80,14 +80,13 @@ button:hover {
     flex-wrap: wrap;
     margin-top: 20px;
 }
-
 .menu {
     display: inline-block;
     text-decoration: none;
     color: #fff;
     font-size: 1.2rem;
     background-color: #66676D;
-    padding: 15px 30px;
+    padding: 20px 35px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
@@ -95,4 +94,7 @@ button:hover {
 .menu:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.team, .league {
+    text-align: center;
 }

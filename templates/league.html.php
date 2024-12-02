@@ -17,16 +17,14 @@
         </div>
     </div>
 	<div class="container">
-        <div class="myleague">
+        <div class="league">
             <h2>My League</h2>
-            <div class="leaguelist">
-                <p>add league tables</p>
-			</div>
-            <div class="leaguedetail">
-                <button class="addleague">Add a league</button>
-                <button class="joinleague">Join a league</button>
-                <button class="drafts">Draft</button>
-            </div>
+            <p>add league tables</p>
+		</div>
+        <div class="league">
+            <button class="addleague">Add a league</button>
+            <button class="joinleague">Join a league</button>
+            <button class="drafts">Draft</button>
         </div>
     </div>
 </body>

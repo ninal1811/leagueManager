@@ -160,7 +160,7 @@ DELIMITER ;
 
 
 
-
+-- data retrival for all players in a user's teams
 DELIMITER $$
 CREATE PROCEDURE GetPlayerFromUser(IN p_User_ID INT)
     BEGIN
@@ -173,7 +173,7 @@ DELIMITER;
 
 CALL GetPlayerFromUser(1);
 
-
+-- data retrival for all teams that a user owns
 DELIMITER $$
 CREATE PROCEDURE GetTeamFromUser(IN p_User_ID INT)
 BEGIN
@@ -186,7 +186,7 @@ DELIMITER ;
 CALL GetTeamFromUser(1);
 
 
-
+-- data retrival for leauges owned by a given user
 DELIMITER $$
 CREATE PROCEDURE GetLeagueFromUser(IN p_User_ID INT)
 BEGIN
@@ -199,7 +199,7 @@ DELIMITER ;
 
 CALL GetLeagueFromUser(1);
 
-
+-- data retrival for teams in the league
 DELIMITER $$
 CREATE PROCEDURE GetTeamFromLeague(IN p_League_ID INT)
     BEGIN
@@ -232,3 +232,20 @@ END $$
 DELIMITER ;
 
 CALL AddTrade(1,2,1,6);
+
+
+
+-- data retrival for playerStatistics from the current user
+DELIMITER $$
+CREATE PROCEDURE GetStatsFromUser(IN p_User_ID INT)
+BEGIN
+    SELECT ps.*
+    FROM Player_Statistic ps INNER JOIN player p
+    ON ps.Player_ID = p.Player_ID
+    INNER JOIN team t
+    ON p.Team_ID = t.Team_ID
+    WHERE t.owner = p_User_ID;
+END $$
+DELIMITER ;
+
+CALL GetStatsFromUser(1);
